@@ -2,6 +2,15 @@
 
 {% block body %}
     <h1>Blog</h1>
+    
+    {% for post in posts %}
+        
+        <h2> {{ post.title }} </h2>
+        
+        <p> {{ post.lead }} </p>
+        
+    {% endfor %}
+    
 {% endblock %}
 
 {% block stylesheets %}
