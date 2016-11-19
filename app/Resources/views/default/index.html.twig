@@ -1,18 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Blog</h1>
-    
+    <div class="jumbotron">
+        <h1>Symfony 2</h1>
+        <p>Witam wszystkich sympatyków programowania w php na moim blogu</p>
+        <hr>
+    </div>
     {% for post in posts %}
         
-        <h2> {{ post.title }} </h2>
+        <h2><a href="{{ path('show_post', {'id': post.id}) }}">{{ post.title }}</a></h2>
         
         <p> {{ post.lead }} </p>
         
     {% endfor %}
     
+    <div class="text-center">
+        <div class="navigation">
+            {{ knp_pagination_render(posts) }}
+        </div>
+    </div>
+    
 {% endblock %}
 
-{% block stylesheets %}
 
-{% endblock %}
