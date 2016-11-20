@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/views/default/show.html.twig</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Entity/Post.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Entity/User.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Controller/DefaultController.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Entity/Comment.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Form/CommentType.php</file>
+        </group>
+    </open-files>
+</project-private>

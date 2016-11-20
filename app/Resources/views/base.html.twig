@@ -12,9 +12,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    {% block body %}{% endblock %}
-                </div>
+                    <div class="col-md-10">
+
+                        <div class="pull-right">
+                            {% if app.user %}
+                                <p>Zalogowany jako <b>{{ app.user }}</b> | <a href="{{ path('fos_user_security_logout') }}">Wyloguj</a><p/>
+                            {% else %}
+                                <p><a href="{{ path('fos_user_security_login')}}">Zaloguj się</a></p>    
+                            {% endif %}
+                        </div>
+
+                    </div>
+                <div class="col-md-1"></div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-1"></div>
+                    <div class="col-md-10">
+
+                        {% block body %}{% endblock %}
+                    </div>
                 <div class="col-md-1"></div>
             </div>
         </div>
