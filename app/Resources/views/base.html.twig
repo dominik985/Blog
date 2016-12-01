@@ -16,10 +16,11 @@
 
                         <div class="pull-right">
                             {% if app.user %}
-                                <p>Zalogowany jako <b>{{ app.user }}</b> | {% if is_granted('ROLE_ADMIN') %} <a href="{{ path('admin')}}">Panel admina</a> {% endif %} | <a href="{{ path('fos_user_security_logout') }}">Wyloguj</a><p/>
+                                <h4>Zalogowany jako <b>{{ app.user }}</b> | {% if is_granted('ROLE_ADMIN') %} <a href="{{ path('admin')}}">Panel admina</a> | {% endif %}<a href="{{ path('homepage')}}">Strona główna</a> | <a href="{{ path('fos_user_security_logout') }}">Wyloguj</a></h4>
                             {% else %}
-                                <p><a href="{{ path('fos_user_security_login')}}">Zaloguj się</a></p>    
+                                <h4><a href="{{ path('homepage')}}">Strona główna</a> | <a href="{{ path('fos_user_security_login')}}">Zaloguj się</a></h4>    
                             {% endif %}
+                                  
                         </div>
 
                     </div>

@@ -6,11 +6,22 @@
         <p>Witam wszystkich sympatyków programowania w php na moim blogu</p>
         <hr>
     </div>
+    <br>
     {% for post in posts %}
         
-        <h2><a href="{{ path('show_post', {'id': post.id}) }}">{{ post.title }}</a></h2>
+            <h2><a href="{{ path('show_post', {'id': post.id}) }}">{{ post.title }}</a>
+                
+                {% if post.comments|length == 1 %}
+                    <small class="text-danger pull-right">{{post.comments|length}} komentarz</small>
+                {% elseif post.comments|length > 1 and post.comments|length < 5 %}
+                    <small class="text-danger pull-right">{{post.comments|length}} komentarze</small>
+                {% else %}
+                    <small class="text-danger pull-right">{{post.comments|length}} komentarzy</small>
+                {% endif %}
+            </h2>
         
-        <p> {{ post.lead }} </p>
+        <h3> {{ post.lead }} </h3>
+        <hr><br>
         
     {% endfor %}
     

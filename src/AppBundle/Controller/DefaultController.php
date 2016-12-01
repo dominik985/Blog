@@ -34,6 +34,9 @@ class DefaultController extends Controller
         
 //      Displaying post using knp_paginator
         
+        $comments = new Post();
+        $comments->getComments()->count();
+        
         $repo = $this->getDoctrine()->getRepository('AppBundle:Post');
         
         $query = $repo->createQueryBuilder('p');
@@ -45,7 +48,9 @@ class DefaultController extends Controller
             10/*limit per page*/
         );
         
-        return $this->render('default/index.html.twig', array('posts' => $pagination));
+        
+        
+        return $this->render('default/index.html.twig', array('posts' => $pagination, 'comments' => $comments));
                 
         
     }

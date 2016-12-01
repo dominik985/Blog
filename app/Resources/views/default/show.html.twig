@@ -2,12 +2,19 @@
 
 {% block body %}
     
-        <h1> {{ post.title }} </h1>
+    <div class="jumbotron">
+        <h1>Symfony 2</h1>
+        <p>Witam wszystkich sympatyków programowania w php na moim blogu</p>
+        <hr>
+    </div>
+    <br>
+    
+        <h1 class="text-info"> {{ post.title }} </h1>
      
     <div>
         
-        <p> {{ post.content }} </p>
-        <p>Dodano: {{ post.createdat|date("H:i m/d/Y") }}</p>
+        <h4> {{ post.content }} </h4>
+        <h4 class="text-danger text-right">Dodano: {{ post.createdat|date("H:i m/d/Y") }}</h4>
         <hr>
         <h3>Komentarze</h3>
         
@@ -30,8 +37,8 @@
         {% for comment in post.comments %}
         
             <div>
-                <p><b>{{ comment.content}}</b></p>
-                <p>Dodano: {{ comment.createdat|date("H:i m/d/Y")}} {% if comment.user %} przez: {{ comment.user }} {% endif %}</p>
+                <h4 class="text-danger">Dodano: {{ comment.createdat|date("H:i m/d/Y")}} {% if comment.user %} przez: {{ comment.user }} {% endif %}</h4>
+                <h4><b>{{ comment.content}}</b></h4> 
                 <hr>
             </div>
             
