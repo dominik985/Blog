@@ -4,22 +4,33 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/config/security.yml</file>
-            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Repository/PostRepository.php</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Entity/UserRepository.php</file>
-            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/views/default/show.html.twig</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Repository/UserRepository.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/FOSUserBundle/views/Security/login_content.html.twig</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/config/routing.yml</file>
-            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Entity/Comment.php</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/config/config.yml</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/FOSUserBundle/views/Registration/check_email.html.twig</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/config/parameters.yml</file>
-            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/views/base.html.twig</file>
-            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Repository/CommentRepository.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/views/default/index.html.twig</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/FOSUserBundle/views/Registration/email.txt.twig</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Entity/Post.php</file>
-            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Entity/User.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/FOSUserBundle/views/layout.html.twig</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/config/config_dev.yml</file>
-            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Controller/DefaultController.php</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Form/CommentType.php</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/AppKernel.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Repository/PostRepository.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/config/parameters.yml.dist</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/views/default/show.html.twig</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Entity/Comment.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/views/base.html.twig</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Repository/CommentRepository.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Entity/User.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/FOSUserBundle/views/Registration/register.html.twig</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Controller/DefaultController.php</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/translations/messages.pl.xlf</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/FOSUserBundle/views/Security/login.html.twig</file>
+            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig</file>
         </group>
     </open-files>
 </project-private>
