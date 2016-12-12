@@ -9,19 +9,21 @@
     <br>
     {% for post in posts %}
         
-            <h2><a href="{{ path('show_post', {'id': post.id}) }}">{{ post.title }}</a>
-                
-                {% if post.comments|length == 1 %}
-                    <small class="text-danger pull-right">{{post.comments|length}} komentarz</small>
-                {% elseif post.comments|length > 1 and post.comments|length < 5 %}
-                    <small class="text-danger pull-right">{{post.comments|length}} komentarze</small>
-                {% else %}
-                    <small class="text-danger pull-right">{{post.comments|length}} komentarzy</small>
-                {% endif %}
-            </h2>
+            <h2><a href="{{ path('show_post', {'id': post.id}) }}">{{ post.title }}</a></h2>
         
         <h3> {{ post.lead }} </h3>
-        <hr><br>
+        
+        <hr>
+        <h4 class="text-danger">Dodano: {{ post.createdat|date("H:i m/d/Y")}}
+            {% if post.comments|length == 1 %}
+                    <p class="pull-right">{{post.comments|length}} komentarz&nbsp;&nbsp;</p>
+                {% elseif post.comments|length > 1 and post.comments|length < 5 %}
+                    <p class="pull-right">{{post.comments|length}} komentarze</p>
+                {% else %}
+                    <p class="pull-right">{{post.comments|length}} komentarzy</p>
+            {% endif %}
+        </h4>
+        <br>
         
     {% endfor %}
     

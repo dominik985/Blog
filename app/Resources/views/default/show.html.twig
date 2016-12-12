@@ -16,22 +16,27 @@
         <h4> {{ post.content }} </h4>
         <h4 class="text-danger text-right">Dodano: {{ post.createdat|date("H:i m/d/Y") }}</h4>
         <hr>
-        <h3>Komentarze</h3>
+        
         
         {% if app.user %}
-        
-            {{ form_start(form) }}
+            
+            <div class="container-fluid">
+                <h3>Komentarze</h3>
+                    {{ form_start(form) }}
 
-                {{ form_widget(form) }}
+                        {{ form_widget(form) }}
 
-                <button class="btn btn-primary pull-right">Dodaj komentarz</button>
+                        <button class="btn btn-primary pull-right">Dodaj komentarz</button>
 
-            {{ form_end(form) }}
+                    {{ form_end(form) }}
+            </div>
+            
             
         {% else %}
-            
-            <p>Komentarze mogą dodawać tylko zalogowani użytkownicy. <a href="{{ path('fos_user_security_login')}}">Zaloguj się</a></p>
-            
+            <div>
+                <h4>Komentarze mogą dodawać tylko zalogowani użytkownicy. <a href="{{ path('fos_user_security_login')}}">Zaloguj się</a></h4>
+                <br>
+            </div>
         {% endif %}
         
         {% for comment in post.comments %}
