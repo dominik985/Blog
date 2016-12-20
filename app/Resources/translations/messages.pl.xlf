@@ -3,8 +3,8 @@
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
             <trans-unit id="add_comment">
-                <source>Add comment</source>
-                <target>Dodaj komentarz</target>
+                <source>Content of comment</source>
+                <target>Treść komentarza</target>
             </trans-unit>
         </body>
     </file>

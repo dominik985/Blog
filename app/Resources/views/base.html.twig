@@ -9,6 +9,7 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+    
         <div class="container">
             <div class="row">
                 <div class="col-md-1"></div>
@@ -26,7 +27,11 @@
                     </div>
                 <div class="col-md-1"></div>
             </div>
+        </div>
         
+        {% block head %} {% endblock %}
+                            
+        <div class="container">
             <div class="row">
                 <div class="col-md-1"></div>
                     <div class="col-md-10">
@@ -36,20 +41,13 @@
                 <div class="col-md-1"></div>
             </div>
             <br>
-                    
-            <div class="row">
-                <div class="col-md-1"></div>
-                    <div class="col-md-10">
-                      
-                       <p class="text-center">&copy; Symfony blog 2016.</p>
-                      
-                    </div>
-                <div class="col-md-1"></div>
-            </div>        
+                          
             <br>        
         </div> <!-- /container -->
-           
         
+        <div>  
+        {% block footer %} {%  endblock %}
+        </div>
         
         
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>

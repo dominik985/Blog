@@ -1,27 +1,41 @@
 {% extends 'base.html.twig' %}
 
+{% block head %} 
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 text-center">
+
+                    <h2><b>Symfony 2</b></h2>
+                    <br>
+                    <h4 class="text-muted">Witam wszystkich sympatyków programowania w php na moim blogu</h4>
+                    <hr>
+                </div>
+                <div class="col-md-1"></div>
+
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
+
 {% block body %}
     
-    <div class="jumbotron">
-        <h1>Symfony 2</h1>
-        <p>Witam wszystkich sympatyków programowania w php na moim blogu</p>
-        <hr>
-    </div>
-    <br>
-    
-        <h1 class="text-info"> {{ post.title }} </h1>
-     
-    <div>
+    <div class="row">
+        <h2 class="text-info"> {{ post.title }} </h2>
         
         <h4> {{ post.content }} </h4>
         <h4 class="text-danger text-right">Dodano: {{ post.createdat|date("H:i m/d/Y") }}</h4>
         <hr>
-        
-        
+    </div>
+    
+    <div class="row">
         {% if app.user %}
-            
-            <div class="container-fluid">
-                <h3>Komentarze</h3>
+            <h3>Twój komentarz:</h3>
+          
+                
                     {{ form_start(form) }}
 
                         {{ form_widget(form) }}
@@ -29,7 +43,7 @@
                         <button class="btn btn-primary pull-right">Dodaj komentarz</button>
 
                     {{ form_end(form) }}
-            </div>
+          
             
             
         {% else %}
@@ -39,6 +53,11 @@
             </div>
         {% endif %}
         
+    </div>
+        
+    <div class="row">
+        <h3>Ostatnie komentarze:</h3>
+        <hr>
         {% for comment in post.comments %}
         
             <div>
@@ -54,4 +73,8 @@
     
 {% endblock %}
 
-
+{% block footer %}
+   <footer class="footer">
+        <p class="text-center">&copy; Symfony blog 2016.</p>
+      </footer>
+{% endblock %}

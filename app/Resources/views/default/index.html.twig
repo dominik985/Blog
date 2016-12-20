@@ -1,20 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+{% block head %} 
+
     <div class="jumbotron">
-        <h1>Symfony 2</h1>
-        <p>Witam wszystkich sympatyków programowania w php na moim blogu</p>
-        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 text-center">
+
+                    <h2><b>Symfony 2</b></h2>
+                    <br>
+                    <h4 class="text-muted">Witam wszystkich sympatyków programowania w php na moim blogu</h4>
+                    <hr>
+                </div>
+                <div class="col-md-1"></div>
+
+            </div>
+        </div>
     </div>
-    <br>
+    
+{% endblock %}
+
+{% block body %}
+    
     {% for post in posts %}
         
-            <h2><a href="{{ path('show_post', {'id': post.id}) }}">{{ post.title }}</a></h2>
+            <h3><a href="{{ path('show_post', {'id': post.id}) }}">{{ post.title }}</a></h3>
         
-        <h3> {{ post.lead }} </h3>
+        <h4> {{ post.lead }} </h4>
         
         <hr>
-        <h4 class="text-danger">Dodano: {{ post.createdat|date("H:i m/d/Y")}}
+        <h5 class="text-danger">Dodano: {{ post.createdat|date("H:i m/d/Y")}}
             {% if post.comments|length == 1 %}
                     <p class="pull-right">{{post.comments|length}} komentarz&nbsp;&nbsp;</p>
                 {% elseif post.comments|length > 1 and post.comments|length < 5 %}
@@ -22,7 +38,7 @@
                 {% else %}
                     <p class="pull-right">{{post.comments|length}} komentarzy</p>
             {% endif %}
-        </h4>
+        </h5>
         <br>
         
     {% endfor %}
@@ -35,4 +51,8 @@
     
 {% endblock %}
 
-
+{% block footer %}
+   <footer class="footer">
+        <p class="text-center">&copy; Symfony blog 2016.</p>
+      </footer>
+{% endblock %}
