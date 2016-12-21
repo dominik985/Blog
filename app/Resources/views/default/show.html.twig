@@ -2,7 +2,7 @@
 
 {% block head %} 
 
-    <div class="jumbotron">
+    <div class="well">
         <div class="container">
             <div class="row">
                 <div class="col-md-1"></div>
@@ -18,16 +18,24 @@
             </div>
         </div>
     </div>
-    
+                
 {% endblock %}
 
 {% block body %}
     
     <div class="row">
-        <h2 class="text-info"> {{ post.title }} </h2>
+            {% for flash_message in app.session.flashBag.get('success') %}
+                <div class="alert alert-success">
+                    {{ flash_message }}
+                </div>
+            {% endfor %}
+    </div>
+    
+    <div class="row">
+        <h3><b>{{ post.title }}<b></h3>
         
-        <h4> {{ post.content }} </h4>
-        <h4 class="text-danger text-right">Dodano: {{ post.createdat|date("H:i m/d/Y") }}</h4>
+        <blockquote><h4>{{ post.content }}</h4></blockquote>
+        <h5 class="text-danger text-right">Dodano: {{ post.createdat|date("H:i m/d/Y") }}</h5>
         <hr>
     </div>
     
@@ -48,7 +56,10 @@
             
         {% else %}
             <div>
-                <h4>Komentarze mogą dodawać tylko zalogowani użytkownicy. <a href="{{ path('fos_user_security_login')}}">Zaloguj się</a></h4>
+                <h4>Komentarze mogą dodawać tylko zalogowani użytkownicy. Kliknij 
+                    <a href="{{ path('fos_user_security_login')}}">tutaj</a>
+                        żeby się zalogować. Jeśli nie masz jeszcze konta 
+                        <a href="{{ path('fos_user_registration_register')}}">zarejestruj się.</a></h4>
                 <br>
             </div>
         {% endif %}
@@ -61,13 +72,14 @@
         {% for comment in post.comments %}
         
             <div>
-                <h4 class="text-danger">Dodano: {{ comment.createdat|date("H:i m/d/Y")}} {% if comment.user %} przez: {{ comment.user }} {% endif %}</h4>
-                <h4><b>{{ comment.content}}</b></h4> 
-                <hr>
+                <blockquote><h5 class="text-danger">Dodano: {{ comment.createdat|date("H:i m/d/Y")}} {% if comment.user %} przez: {{ comment.user }} {% endif %}</h5>
+                <h5><b>{{ comment.content}}</b></h5></blockquote> 
+                
             </div>
+                
             
         {% endfor %}
-    
+        <hr>
     </div>
    
     
@@ -75,6 +87,6 @@
 
 {% block footer %}
    <footer class="footer">
-        <p class="text-center">&copy; Symfony blog 2016.</p>
+        <p class="text-center text-muted">&copy; Symfony blog 2016.</p>
       </footer>
 {% endblock %}

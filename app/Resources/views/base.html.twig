@@ -23,7 +23,7 @@
                             {% endif %}
                                   
                         </div>
-
+                            
                     </div>
                 <div class="col-md-1"></div>
             </div>
@@ -36,7 +36,15 @@
                 <div class="col-md-1"></div>
                     <div class="col-md-10">
 
-                        {% block body %}{% endblock %}
+                        {% block body %}
+                            <div class="row">
+                                {% for flash_message in app.session.flashBag.get('success') %}
+                                    <div class="alert alert-success">
+                                        {{ flash_message }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endblock %}
                     </div>
                 <div class="col-md-1"></div>
             </div>
