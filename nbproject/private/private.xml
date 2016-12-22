@@ -3,12 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/config/security.yml</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Entity/UserRepository.php</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/src/AppBundle/Repository/UserRepository.php</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/FOSUserBundle/views/Security/login_content.html.twig</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/config/routing.yml</file>
-            <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/config/config.yml</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/FOSUserBundle/views/Registration/check_email.html.twig</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/config/parameters.yml</file>
             <file>file:/home/dominik/Workspace/Symfony/KAT_PHP_S_02b_Symfony2/1_Wstep_do_Symfony/Symfony/blog/app/Resources/views/default/index.html.twig</file>

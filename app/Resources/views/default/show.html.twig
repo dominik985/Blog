@@ -23,13 +23,7 @@
 
 {% block body %}
     
-    <div class="row">
-            {% for flash_message in app.session.flashBag.get('success') %}
-                <div class="alert alert-success">
-                    {{ flash_message }}
-                </div>
-            {% endfor %}
-    </div>
+    {{ parent() }}
     
     <div class="row">
         <h3><b>{{ post.title }}<b></h3>
@@ -52,8 +46,6 @@
 
                     {{ form_end(form) }}
           
-            
-            
         {% else %}
             <div>
                 <h4>Komentarze mogą dodawać tylko zalogowani użytkownicy. Kliknij 
@@ -69,7 +61,7 @@
     <div class="row">
         <h3>Ostatnie komentarze:</h3>
         <hr>
-        {% for comment in post.comments %}
+        {% for comment in comments %}
         
             <div>
                 <blockquote><h5 class="text-danger">Dodano: {{ comment.createdat|date("H:i m/d/Y")}} {% if comment.user %} przez: {{ comment.user }} {% endif %}</h5>
@@ -81,12 +73,10 @@
         {% endfor %}
         <hr>
     </div>
-   
-    
 {% endblock %}
 
 {% block footer %}
    <footer class="footer">
         <p class="text-center text-muted">&copy; Symfony blog 2016.</p>
-      </footer>
+   </footer>
 {% endblock %}

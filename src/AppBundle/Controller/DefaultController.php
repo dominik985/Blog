@@ -45,14 +45,13 @@ class DefaultController extends Controller
         $pagination = $paginator->paginate(
             $query, /* query NOT result */
             $request->query->getInt('page', 1)/*page number*/,
-            10/*limit per page*/
-        );
-        
-        
+            10/*limit per page*/,
+            array(/* Sorting posts order by createdat desc */
+            'defaultSortFieldName' => 'p.createdAt',
+            'defaultSortDirection' => 'desc',
+        ));
         
         return $this->render('default/index.html.twig', array('posts' => $pagination, 'comments' => $comments));
-                
-        
     }
     
     /**
@@ -64,7 +63,8 @@ class DefaultController extends Controller
         
         //if user is loged in
         if ($user = $this->getUser()) {
-            
+
+            // Adding comment to post and user
             $comment = new Comment();
             $comment->setPost($post);
             $comment->setUser($user);
@@ -74,19 +74,33 @@ class DefaultController extends Controller
         
             if ($form->isValid()) {
             
+            //Adding comment to database
             $em = $this->getDoctrine()->getManager();
             $em->persist($comment);
             $em->flush();
             
+            //Displaying flass message
             $this->addFlash('success', 'Komentarz został dodany');
             
             return $this->redirectToRoute('show_post', array('id' => $post->getId()));
             }
         }
         
+       // Displaying comments order by createdAt desc
         
+        $repo = $this->getDoctrine()->getRepository('AppBundle:Comment');
         
+        $query = $repo->createQueryBuilder('c')
+                ->select('c')
+                ->where('c.post = :post_id')
+                ->setParameter('post_id', $post)
+                ->orderBy('c.createdAt', 'DESC')
+                ->getQuery();
+                
+        $comments = $query->getResult();
+
         return $this->render('default/show.html.twig', array(
+            'comments' => $comments,
             'post' => $post,
             'form' => is_null($form) ? $form : $form->createView()
         ));
