@@ -1,3 +1,5 @@
+
+
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
@@ -87,8 +89,18 @@ fos_user:
     user_class: AppBundle\Entity\User
     
 easy_admin:
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'd/m/Y H:i:s'
     entities:
-        - AppBundle\Entity\Post
-        - AppBundle\Entity\Comment
-        - AppBundle\Entity\User
-        
+        Post:
+            class: AppBundle\Entity\Post
+            list:
+                fields: ['id','title','content','createdAt','comments']
+        Comment:
+            class: AppBundle\Entity\Comment
+            list:
+                fields: ['id','content','createdAt','post','user']
+        User:
+            class: AppBundle\Entity\User

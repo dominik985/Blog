@@ -49,7 +49,7 @@
         {% else %}
             <div>
                 <h4>Komentarze mogą dodawać tylko zalogowani użytkownicy. Kliknij 
-                    <a href="{{ path('fos_user_security_login')}}">tutaj</a>
+                    <a href="{{ path('add_comment', {'id': post.id}) }}">tutaj</a>
                         żeby się zalogować. Jeśli nie masz jeszcze konta 
                         <a href="{{ path('fos_user_registration_register')}}">zarejestruj się.</a></h4>
                 <br>
